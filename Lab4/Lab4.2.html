@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ревин</title>
+</head>
+<body>
+
+    <script>
+        var mass1 = [21];
+        var z,v,c;
+        document.write("1 задание: ");
+
+        for (var i = 0; i < 21; i++) {
+            mass1[i] = Math.floor(Math.random()*(20-1)+1);
+            document.write(mass1[i], " ");
+        }
+        document.write("<br>");
+        document.write("2 задание: ");
+        document.write("<br>");
+
+        z = Math.min.apply(null, mass1)
+        v = mass1[3];
+        c = mass1.indexOf(z);
+        document.write("Минимальный эллемент, третий эллемент и индекс минимального эллемента массива: ", z, ',' ,v , ',' ,c);
+        document.write("<br>");
+
+        mass1.splice(3, 1, z);
+        mass1.splice(c, 1, v);
+        
+
+        for (var i = 0; i < 21; i++) {
+            document.write(mass1[i], " ");
+        }
+
+    </script>
+</body>
+</html>

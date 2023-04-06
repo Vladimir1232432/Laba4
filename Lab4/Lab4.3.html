@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ревин</title>
+</head>
+<body>
+
+    <script>
+        var mass1 = [21];
+        var mass2 = [];
+        var Z = 0;
+        var C = 10;
+        var arifmet = 0;
+        var proizvod = 1;
+        document.write("1 задание: ");
+
+        for (var i = 0; i < 21; i++) {
+            mass1[i] = Math.floor(Math.random()*(20 + 20) - 20);
+            document.write(mass1[i], " ");
+            mass2.push(i);
+        }
+        document.write("<br>");
+        document.write("2 задание: ");
+        document.write("<br>");
+
+        for (var i = 0; i < 21; i++) {
+            if (mass1[i] > 0 && mass2[i] % 2 != 0) {
+                Z++;
+                arifmet += mass1[i];
+            }
+            else if (mass1[i] < C) {
+                proizvod *= mass1[i]; //Не понимаю почему оно иногда выдает 0 даже когда есть числа меньше заданного С
+            }
+        }
+        document.write("Количество положительных чисел, стоящих на нечетных местах: ", Z);
+        document.write("<br>");
+        document.write("Среднее арифметическое: ", arifmet/Z);
+        document.write("<br>");
+        document.write("С = 10.");
+        document.write("<br>");
+        document.write("Произведение чисел, меньших заданного C: ", proizvod);
+    </script>
+</body>
+</html>
